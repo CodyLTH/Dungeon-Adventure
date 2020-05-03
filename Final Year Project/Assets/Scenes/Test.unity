@@ -3684,6 +3684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManger
       objectReference: {fileID: 0}
+    - target: {fileID: 2160678480257896569, guid: 0142a080543cc754fb78e73777be0092,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3730500636442478010, guid: 0142a080543cc754fb78e73777be0092,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5201,6 +5206,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4812074950443961364, guid: e5525631cde065b49b58d092f1d5422c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5525631cde065b49b58d092f1d5422c, type: 3}
 --- !u!4 &1297293028 stripped
@@ -5223,18 +5233,8 @@ PrefabInstance:
       objectReference: {fileID: 1297293028}
     - target: {fileID: 4312231526503151297, guid: 8471094dd098aa4419deb2460dc99230,
         type: 3}
-      propertyPath: rotationSmoothTime
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312231526503151297, guid: 8471094dd098aa4419deb2460dc99230,
-        type: 3}
       propertyPath: mouseSensitivity
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312231526503151297, guid: 8471094dd098aa4419deb2460dc99230,
-        type: 3}
-      propertyPath: scrollSensitivity
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4312231526503151298, guid: 8471094dd098aa4419deb2460dc99230,
         type: 3}
@@ -10299,6 +10299,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 269435459, guid: 9c3de18a0b4fe1d4ba65b28df688b17c, type: 3}
+      propertyPath: m_MaxValue
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3175995131813940736, guid: 9c3de18a0b4fe1d4ba65b28df688b17c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10358,21 +10362,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: -----UI-----
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545106845261745127, guid: 9c3de18a0b4fe1d4ba65b28df688b17c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Time: N/A'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545106845261745127, guid: 9c3de18a0b4fe1d4ba65b28df688b17c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545106845261745127, guid: 9c3de18a0b4fe1d4ba65b28df688b17c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c3de18a0b4fe1d4ba65b28df688b17c, type: 3}

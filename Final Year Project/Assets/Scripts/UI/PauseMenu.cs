@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
 	public GameObject pauseMenuUI;
 	public GameObject fadeImage;
 	public GameObject gameOverUI;
+	public GameObject SettingMenu;
 	public TextMeshProUGUI textMesh;
 
 
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
 		Time.timeScale = 1;
 		pauseMenuUI.SetActive(false);
 		GetComponent<CursorLock>().LockCursor();
+		SettingMenu.SetActive(false);
 		textMesh.text = "Esc - Pause";
 		GameIsPauesed = false;
 	}
@@ -51,6 +53,17 @@ public class PauseMenu : MonoBehaviour
 		textMesh.text = "Esc - Resume";
 		GameIsPauesed = true;
 	}
+
+
+	public void Setting()
+	{
+		Time.timeScale = 0;
+		SettingMenu.SetActive(true);
+		GetComponent<CursorLock>().ShowCursor();
+		GameIsPauesed = true;
+	}
+
+
 
 	public void Menu()
 	{

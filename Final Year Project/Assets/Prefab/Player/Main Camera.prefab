@@ -99,14 +99,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   lockCursor: 1
-  mouseSensitivity: 10
+  mouseSensitivity: 7
   scrollSensitivity: 10
   dstFromTarget: 4
   dstMinMax: {x: 2, y: 10}
-  highAngleDstMinMax: {x: 8, y: 15}
   pitchMinMax: {x: -40, y: 60}
-  highAnglePitchMinMax: {x: 50, y: 70}
-  rotationSmoothTime: 0.12
+  rotationSmoothTime: 0.03
   positionSmoothSpeed: 1
   yaw: 0
   pitch: 0
@@ -114,7 +112,8 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 512
-  minDst: 1
+  minAdjustedDst: 0.5
+  collision: 1
 --- !u!114 &7937382526121616772
 MonoBehaviour:
   m_ObjectHideFlags: 0

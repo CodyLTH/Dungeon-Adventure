@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
 	bool isGettingHit = false;
 	bool controllable = true;
 	//Edge Detection
+	public bool detection = true;
 	Ray groundRay;
 	Ray edgeRay;
 	Vector3 edgeDetectMoveDir;
@@ -204,7 +205,7 @@ public class PlayerController : MonoBehaviour
 	{
 		groundRay.origin = transform.position + new Vector3(0f, 0.5f, 0f);
 		groundRay.direction = -transform.up;
-		if (!Physics.Raycast(groundRay, 0.8f, collisionMask) && controller.isGrounded)
+		if (!Physics.Raycast(groundRay, 0.8f, collisionMask) && controller.isGrounded && detection)
 		{
 			controller.SimpleMove(edgeDetectMoveDir * 20f);
 		}
