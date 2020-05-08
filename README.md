@@ -1,3 +1,3 @@
 # Dungeon-Adventure
-Dowload Game and Source Project: \
+Dowload Game: \
 https://github.com/CodyLTH/Dungeon-Adventure/releases
