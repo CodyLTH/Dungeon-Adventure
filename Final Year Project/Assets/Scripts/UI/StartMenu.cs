@@ -11,6 +11,7 @@ public class StartMenu : MonoBehaviour
 	{
 		FadeUI.instance.StartFade("NextLevel");
 		GameManager.instance.SetTime();
+		GameManager.instance.currentHealth = GameManager.instance.maxHealth;
 	}
 
 	public void Quit()

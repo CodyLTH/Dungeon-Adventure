@@ -12,9 +12,11 @@ public class SettingMenu : MonoBehaviour
 
 	private void Start()
 	{
+		volumeSlider.value = AudioListener.volume * 10;
+
 		camController = Camera.main.GetComponent<CameraController>();
-		volumeSlider.value = AudioListener.volume*10;
-		sensitivitySlider.value = camController.mouseSensitivity*2;
+		camController.mouseSensitivity = GameManager.instance.mouseSensitivity;
+		sensitivitySlider.value = GameManager.instance.mouseSensitivity*2;
 	}
 
 	public void Back()
@@ -26,6 +28,15 @@ public class SettingMenu : MonoBehaviour
 	public void UpdateSetting()
 	{
 		AudioListener.volume = volumeSlider.value/10;
-		camController.mouseSensitivity = sensitivitySlider.value/2;
+		if (camController != null)
+		{
+			camController.mouseSensitivity = sensitivitySlider.value / 2;
+		}
 	}
+
+	private void OnDestroy()
+	{
+		GameManager.instance.mouseSensitivity = camController.mouseSensitivity;
+	}
+
 }

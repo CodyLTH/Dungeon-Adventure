@@ -27,11 +27,11 @@ public class GameManager : MonoBehaviour
 	public AudioSource clearBGM;
 	public AudioSource bossBGM;
 	public float startTime;
+	public float mouseSensitivity = 7;
 
 	public void SetTime()
 	{
 		startTime = Time.time;
-
 	}
 	public void playNormalBGM()
 	{

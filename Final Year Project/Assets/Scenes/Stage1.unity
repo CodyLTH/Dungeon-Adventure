@@ -3162,7 +3162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 3}
+  m_AnchoredPosition: {x: 0, y: 4.73}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528849111
@@ -5569,7 +5569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 0, y: 11.3}
   m_SizeDelta: {x: 100, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1060452659
@@ -5593,6 +5593,11 @@ MonoBehaviour:
   m_text: 'Move: W, A, S, D
 
     Slow Move: Shift + Move
+
+    Look Around: Mouse
+
+    Zoom
+    In/Out: Scroll
 
 '
   m_isRightToLeft: 0
@@ -5622,8 +5627,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5663,12 +5668,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1060452659}
-    characterCount: 41
+    characterCount: 80
     spriteCount: 0
-    spaceCount: 10
-    wordCount: 9
+    spaceCount: 16
+    wordCount: 16
     linkCount: 0
-    lineCount: 2
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -13810,6 +13815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 986746144, guid: 9c3de18a0b4fe1d4ba65b28df688b17c, type: 3}
+      propertyPath: m_Value
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3175995131813940736, guid: 9c3de18a0b4fe1d4ba65b28df688b17c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13869,21 +13878,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: -----UI-----
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545106845261745127, guid: 9c3de18a0b4fe1d4ba65b28df688b17c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Time: N/A'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545106845261745127, guid: 9c3de18a0b4fe1d4ba65b28df688b17c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545106845261745127, guid: 9c3de18a0b4fe1d4ba65b28df688b17c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c3de18a0b4fe1d4ba65b28df688b17c, type: 3}
