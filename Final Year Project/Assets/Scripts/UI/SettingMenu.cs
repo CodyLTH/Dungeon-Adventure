@@ -17,8 +17,6 @@ public class SettingMenu : MonoBehaviour
 		data = SaveSystem.instance.LoadData();
 		if(data != null)
 		{
-			Debug.Log("Load volume" + data.volume);
-			Debug.Log("Load Sens" + data.mouseSensitivity);
 			AudioListener.volume = data.volume;
 			camController.mouseSensitivity = data.mouseSensitivity;
 			volumeSlider.value = AudioListener.volume * 10;
@@ -26,7 +24,7 @@ public class SettingMenu : MonoBehaviour
 		}
 		else
 		{
-			SaveSystem.instance.SaveData(camController.mouseSensitivity, AudioListener.volume);
+			SaveSystem.instance.SaveData(7.5f, 1f);
 		}
 	
 	}

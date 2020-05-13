@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 		}
 		else
 		{
-			SaveSystem.instance.SaveData(camController.mouseSensitivity, AudioListener.volume);
+			SaveSystem.instance.SaveData(7.5f, 1f);
 		}
 	}
 
