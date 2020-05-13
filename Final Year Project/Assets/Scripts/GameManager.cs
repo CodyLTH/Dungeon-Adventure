@@ -21,13 +21,31 @@ public class GameManager : MonoBehaviour
 	}
 	#endregion
 
+
+	SaveSystem saveSystem;
 	public float maxHealth;
 	public float currentHealth;
 	public AudioSource normalBGM;
 	public AudioSource clearBGM;
 	public AudioSource bossBGM;
 	public float startTime;
-	public float mouseSensitivity = 7;
+
+	private void Start()
+	{
+		CameraController camController = Camera.main.GetComponent<CameraController>();
+		SettingData data = SaveSystem.instance.LoadData();
+		if (data != null)
+		{
+			AudioListener.volume = data.volume;
+			camController.mouseSensitivity = data.mouseSensitivity;
+		}
+		else
+		{
+			SaveSystem.instance.SaveData(camController.mouseSensitivity, AudioListener.volume);
+		}
+	}
+
+
 
 	public void SetTime()
 	{
@@ -52,5 +70,10 @@ public class GameManager : MonoBehaviour
 		clearBGM.Stop();
 		bossBGM.Play();
 
+	}
+	private void OnApplicationQuit()
+	{
+		CameraController camController = Camera.main.GetComponent<CameraController>(); 
+		SaveSystem.instance.SaveData(camController.mouseSensitivity, AudioListener.volume);
 	}
 }

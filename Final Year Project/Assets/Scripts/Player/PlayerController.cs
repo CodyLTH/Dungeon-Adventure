@@ -31,10 +31,12 @@ public class PlayerController : MonoBehaviour
 	bool controllable = true;
 	//Edge Detection
 	public bool detection = true;
+	bool forceMoving = false;
 	Ray groundRay;
 	Ray edgeRay;
 	Vector3 edgeDetectMoveDir;
 	public LayerMask collisionMask;
+
 
 	void Start()
 	{
@@ -53,6 +55,11 @@ public class PlayerController : MonoBehaviour
 			Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 			inputDir = input.normalized;
 			walking = Input.GetKey(KeyCode.LeftShift);
+		}
+		else
+		{
+			inputDir = Vector2.zero;
+			walking = false;
 		}
 
 		EdgeDectect();
@@ -198,7 +205,7 @@ public class PlayerController : MonoBehaviour
 		isAttacking = anim.GetCurrentAnimatorStateInfo(0).IsName("NormalAttack01") || anim.GetCurrentAnimatorStateInfo(0).IsName("NormalAttack02");
 		isKnockedDown = anim.GetCurrentAnimatorStateInfo(0).IsName("KnockedDown") || anim.GetCurrentAnimatorStateInfo(0).IsName("Recover");
 		isGettingHit = anim.GetCurrentAnimatorStateInfo(0).IsName("GetHit");
-		controllable = !(isAttacking || isKnockedDown || isGettingHit);
+		controllable = !(isAttacking || isKnockedDown || isGettingHit || forceMoving);
 	}
 
 	void EdgeDectect()
@@ -208,6 +215,11 @@ public class PlayerController : MonoBehaviour
 		if (!Physics.Raycast(groundRay, 0.8f, collisionMask) && controller.isGrounded && detection)
 		{
 			controller.SimpleMove(edgeDetectMoveDir * 20f);
+			forceMoving = true;
+		}
+		else
+		{
+			forceMoving = false;
 		}
 	}
 

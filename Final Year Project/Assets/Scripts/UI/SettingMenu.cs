@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SettingMenu : MonoBehaviour
 {
+	SettingData data;
 	public GameObject settingMenu;
 	public Slider volumeSlider;
 	public Slider sensitivitySlider;
@@ -12,11 +13,22 @@ public class SettingMenu : MonoBehaviour
 
 	private void Start()
 	{
-		volumeSlider.value = AudioListener.volume * 10;
-
 		camController = Camera.main.GetComponent<CameraController>();
-		camController.mouseSensitivity = GameManager.instance.mouseSensitivity;
-		sensitivitySlider.value = GameManager.instance.mouseSensitivity*2;
+		data = SaveSystem.instance.LoadData();
+		if(data != null)
+		{
+			Debug.Log("Load volume" + data.volume);
+			Debug.Log("Load Sens" + data.mouseSensitivity);
+			AudioListener.volume = data.volume;
+			camController.mouseSensitivity = data.mouseSensitivity;
+			volumeSlider.value = AudioListener.volume * 10;
+			sensitivitySlider.value = camController.mouseSensitivity * 2;
+		}
+		else
+		{
+			SaveSystem.instance.SaveData(camController.mouseSensitivity, AudioListener.volume);
+		}
+	
 	}
 
 	public void Back()
@@ -27,6 +39,10 @@ public class SettingMenu : MonoBehaviour
 
 	public void UpdateSetting()
 	{
+		if (!settingMenu.activeSelf)
+		{
+			return;
+		}
 		AudioListener.volume = volumeSlider.value/10;
 		if (camController != null)
 		{
@@ -36,7 +52,6 @@ public class SettingMenu : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		GameManager.instance.mouseSensitivity = camController.mouseSensitivity;
+		SaveSystem.instance.SaveData(camController.mouseSensitivity, AudioListener.volume);
 	}
-
 }
