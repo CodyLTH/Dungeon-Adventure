@@ -12,12 +12,12 @@ Dowload Game: \
 https://github.com/CodyLTH/Dungeon-Adventure/releases
 <div class="row">
   <div class="column">
-    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(2).png" width="50%" height="50%">
-    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(3).png" width="50%" height="50%">
+    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(2).png" width="45%" height="45%">
+    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(3).png" width="45%" height="45%">
   </div>
   <div class="column">
-    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(4).png" width="50%" height="50%">
-    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(5).png" width="50%" height="50%">
+    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(4).png" width="45%" height="45%">
+    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(5).png" width="45%" height="45%">
   </div>
 </div>
 
