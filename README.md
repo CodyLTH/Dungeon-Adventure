@@ -10,15 +10,15 @@ https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Project%20Report/Projec
 
 Dowload Game: \
 https://github.com/CodyLTH/Dungeon-Adventure/releases
-
-<div class="column" style="width: 50%;">
-<img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(2).png">
-<img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(3).png">
-</div>
-
-<div class="column" style="width: 50%;">
-<img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(4).png">
-<img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(5).png">
+<div class="row">
+  <div class="column">
+    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(2).png" width="50%" height="50%">
+    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(3).png" width="50%" height="50%">
+  </div>
+  <div class="column">
+    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(4).png" width="50%" height="50%">
+    <img src="https://github.com/CodyLTH/Dungeon-Adventure/blob/master/Screenshot/Screenshot%20(5).png" width="50%" height="50%">
+  </div>
 </div>
 
 
